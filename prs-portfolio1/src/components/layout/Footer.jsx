@@ -93,7 +93,7 @@ const Footer = () => {
               letterSpacing: "5px"
             }}
           >
-            <span><span className="text-white">&lt;/&gt;</span> with</span> <span className="text-red-500 text-2xl animate-ping">♥</span> by <span className='text-green-500'>Adnan</span>
+            <span><span className="text-white">&lt;/&gt;</span> with</span> <span className="text-red-500 text-2xl animate-ping">♥</span> by <span className='text-green-500'>_Adnan</span>
           </p>
         </div>
       </div>
