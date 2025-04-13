@@ -50,7 +50,7 @@ const Navbar = () => {
 
   const navbarClass = isDarkTheme
     ? 'backdrop-blur-md bg-black/30 border border-white/10'
-    : 'backdrop-blur-md bg-white/80 border border-black/5';
+    : 'backdrop-blur-md bg-black/30 border border-black/5';
 
   return (
     <header
@@ -59,7 +59,7 @@ const Navbar = () => {
       <div className={`
         ${isScrolled ? `${navbarClass} shadow-lg ${isDarkTheme ? 'shadow-black/5' : 'shadow-black/5'}` : ''} 
         rounded-full px-4 sm:px-6 py-3 flex items-center justify-between transition-all duration-500
-        w-full max-w-[90%] sm:max-w-[440px] md:max-w-[35rem] mx-auto
+        w-full max-w-[55%] sm:max-w-[440px] md:max-w-[35rem] mx-auto
       `}>
         <Link
           to="/"
@@ -122,13 +122,13 @@ const Navbar = () => {
                 } ${isDarkTheme ? 'text-white' : ''}`} />
               <X size={20} className={`absolute inset-0 transition-all duration-500 ${isMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 rotate-90 scale-0'
                 } ${isDarkTheme ? 'text-white' : ''}`} />
-              <span className="absolute inset-0 rounded-full bg-current opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+              {/* <span className="absolute inset-0 rounded-full bg-current opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span> */}
             </div>
           </button>
         </div>
 
         {/* Mobile menu */}
-        <div className={`fixed inset-0 ${isDarkTheme ? 'bg-gradient-to-b from-black/95 to-gray-900/95' : 'bg-gradient-to-b from-white/95 to-gray-50/95'} backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        <div className={`fixed inset-0 ${isDarkTheme ? 'bg-gradient-to-b from-black/95 to-gray-900/95' : 'bg-gradient-to-b from-gray/95 to-gray-50/95'} backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}>
           <nav className="flex flex-col items-center gap-8">
             {[

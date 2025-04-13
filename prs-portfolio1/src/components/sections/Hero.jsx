@@ -327,6 +327,7 @@ const Hero = () => {
 
       <ScrollButton
         targetId="about"
+        id="scrl_btn"
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow z-10"
       />
     </section>
