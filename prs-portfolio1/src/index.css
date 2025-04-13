@@ -385,8 +385,7 @@ html.removing-cursor * {
   }
 
   .scrl_btn {
-    margin-top: 4rem !important;
-    justify-content: center !important;
+    display: none !important;
   }
 
 }
