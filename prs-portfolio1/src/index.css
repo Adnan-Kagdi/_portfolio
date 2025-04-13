@@ -367,7 +367,7 @@ html.removing-cursor * {
     /* margin: auto; */
   }
 
-  .screen{
+  .screen {
     width: 98%;
     height: 88%;
     /* overflow: hidden !important;
@@ -378,10 +378,15 @@ html.removing-cursor * {
     max-width: 100%;
     max-height: 100%;
   }
-  
-  .base{
+
+  .base {
     width: 110%;
     height: 25px;
+  }
+
+  .scrl_btn {
+    margin-top: 4rem !important;
+    justify-content: center !important;
   }
 
 }
