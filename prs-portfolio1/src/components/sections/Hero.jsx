@@ -14,18 +14,18 @@ const Hero = () => {
   const heroRef = useRef(null);
   const floatingElementsRef = useRef([]);
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const { typedText: titleText } = useTypewriter("MERN Stack Developer", 100, true);
-  
+
   useEffect(() => {
     // Set visibility after a small delay for entrance animation
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
-    
+
     return () => clearTimeout(timer);
   }, []);
-  
+
   // Parallax effect on scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -46,11 +46,11 @@ const Hero = () => {
   //     const { clientX, clientY } = e;
   //     const centerX = window.innerWidth / 2;
   //     const centerY = window.innerHeight / 2;
-      
+
   //     // Calculate movement based on mouse position
   //     const moveX = (clientX - centerX) / 50;
   //     const moveY = (clientY - centerY) / 50;
-      
+
   //     floatingElementsRef.current.forEach((el, index) => {
   //       if (el) {
   //         // Different elements move at different speeds for parallax effect
@@ -59,7 +59,7 @@ const Hero = () => {
   //       }
   //     });
   //   };
-    
+
   //   window.addEventListener('mousemove', handleMouseMove);
   //   return () => window.removeEventListener('mousemove', handleMouseMove);
   // }, []);
@@ -71,15 +71,14 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden perspective-1000">
       {/* Enhanced animated background */}
       {/* <EnhacedHeroBackground /> */}
-      <div 
+      <div
         ref={heroRef}
-        className={`container mx-auto px-4 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 pt-20 md:pt-0 transition-all duration-1000 ${
-          isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'
-        }`}
+        className={`container mx-auto px-4 md:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 pt-20 md:pt-0 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'
+          }`}
       >
         {/* Content Column */}
         <div className="w-full md:w-1/2 space-y-6 text-left">
-          <div 
+          <div
             ref={el => floatingElementsRef.current[0] = el}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 bg-white/5 animate-fade-in"
           >
@@ -90,8 +89,8 @@ const Hero = () => {
               <Sparkles className="h-3 w-3 text-yellow-300 animate-pulse" />
             </span>
           </div>
-          
-          <h1 
+
+          <h1
             ref={el => floatingElementsRef.current[1] = el}
             className="text-5xl md:text-7xl font-bold tracking-tight"
           >
@@ -101,42 +100,54 @@ const Hero = () => {
               </span>
             </div>
             <div className="overflow-hidden relative">
-              <span className="block text-gradient-hero animate-slide-up delay-200 relative z-10">
+
+              {
+                isDarkTheme ? (
+                  <span className="block text-gradient-hero animate-slide-up delay-200 relative z-10">
+                    Adnan
+                  </span>
+                ) : (
+                  <span className="block text-grey-500 animate-slide-up delay-200 relative z-10">
+                    Adnan
+                  </span>
+                )
+              }
+
+              {/* <span className="block text-gradient-hero animate-slide-up delay-200 relative z-10">
                 Adnan
                 <span className="absolute -z-10 blur-xl opacity-50 animate-pulse text-primary-hero">Adnan</span>
-              </span>
+              </span> */}
               <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 animate-slide-right delay-700"></div>
             </div>
           </h1>
-          
-          <p 
+
+          <p
             ref={el => floatingElementsRef.current[2] = el}
             className="text-xl md:text-2xl text-muted-foreground max-w-md animate-slide-up delay-300 leading-relaxed"
           >
-            Crafting exceptional digital experiences through 
+            Crafting exceptional digital experiences through
             <span className="relative inline-block mx-1">
               <span className="relative z-10">elegant code</span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-500/30 rounded-full"></span>
-            </span> 
-            and 
+            </span>
+            and
             <span className="relative inline-block mx-1">
               <span className="relative z-10">thoughtful design</span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-500/30 rounded-full"></span>
             </span>.
           </p>
-          
-          <div 
+
+          <div
             ref={el => floatingElementsRef.current[3] = el}
             className="flex flex-col sm:flex-row gap-4 pt-4 animate-slide-up delay-400"
           >
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Button 
-                  className={`group relative overflow-hidden px-8 py-6 rounded-xl transition-all duration-500 shadow-lg ${
-                    isDarkTheme 
-                      ? 'bg-gradient-to-r from-green-600 to-indigo-600 text-white hover:shadow-indigo-500/40' 
-                      : ''
-                  }`}
+                <Button
+                  className={`group relative overflow-hidden px-8 py-6 rounded-xl transition-all duration-500 shadow-lg ${isDarkTheme
+                      ? 'bg-gradient-to-r from-green-600 to-indigo-600 text-white hover:shadow-indigo-500/40'
+                      : 'bg-gradient-to-r from-green-600 to-indigo-600 text-white hover:shadow-indigo-500/40'
+                    }`}
                 >
                   <a className="relative z-10 flex items-center gap-2 font-medium transition-all duration-300 group-hover:tracking-wide" href="#projects">
                     View My Projects
@@ -155,15 +166,14 @@ const Hero = () => {
                 </div>
               </HoverCardContent>
             </HoverCard>
-            
+
             <HoverCard>
               <HoverCardTrigger asChild>
-                <Button 
-                  className={`group relative overflow-hidden px-8 py-6 rounded-xl border transition-all duration-300 shadow-lg ${
-                    isDarkTheme 
-                      ? 'border-white/20 text-white hover:border-white/40' 
-                      : ''
-                  }`}
+                <Button
+                  className={`group relative overflow-hidden px-8 py-6 rounded-xl border transition-all duration-300 shadow-lg ${isDarkTheme
+                      ? 'border-white/20 text-white hover:border-white/40'
+                      : 'border-white/20 text-white hover:border-white/40'
+                    }`}
                 >
                   <a className="relative z-10 flex items-center gap-2 font-medium transition-all duration-300 group-hover:tracking-wide" href="#contact">
                     Get In Touch
@@ -184,14 +194,14 @@ const Hero = () => {
               </HoverCardContent>
             </HoverCard>
           </div>
-          
+
           <div className="pt-8 animate-fade-in delay-500">
             <SocialLinks />
           </div>
         </div>
-        
+
         {/* Hero Image/Visual Column */}
-        <motion.div 
+        <motion.div
           className="hidden lg:block w-1/2 relative"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -257,10 +267,10 @@ const Hero = () => {
                       key={i}
                       r="2"
                       fill="#4ADE80"
-                      initial={{ 
+                      initial={{
                         cx: 150,
                         cy: 150,
-                        opacity: 0 
+                        opacity: 0
                       }}
                       animate={{
                         cx: [150, 250, 250, 150, 150],
@@ -281,7 +291,7 @@ const Hero = () => {
 
             {/* Glowing Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-hero-green/10 via-transparent to-transparent rounded-2xl" />
-            
+
             {/* Interactive Particles */}
             <div className="absolute inset-0">
               {[...Array(15)].map((_, i) => (
@@ -315,7 +325,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <ScrollButton 
+      <ScrollButton
         targetId="about"
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow z-10"
       />

@@ -54,23 +54,23 @@ export const ThemeProvider = ({ children }) => {
       document.documentElement.style.setProperty('--input', '0 0% 15%');
       document.documentElement.style.setProperty('--ring', '0 0% 30%');
     } else {
-      document.documentElement.style.setProperty('--background', '0 0% 98%');
-      document.documentElement.style.setProperty('--foreground', '0 0% 10%');
-      document.documentElement.style.setProperty('--card', '0 0% 100%');
-      document.documentElement.style.setProperty('--card-foreground', '0 0% 10%');
-      document.documentElement.style.setProperty('--popover', '0 0% 100%');
-      document.documentElement.style.setProperty('--popover-foreground', '0 0% 10%');
-      document.documentElement.style.setProperty('--primary', '0 0% 0%');
-      document.documentElement.style.setProperty('--primary-foreground', '0 0% 100%');
-      document.documentElement.style.setProperty('--secondary', '0 0% 96%');
-      document.documentElement.style.setProperty('--secondary-foreground', '0 0% 10%');
-      document.documentElement.style.setProperty('--muted', '0 0% 90%');
-      document.documentElement.style.setProperty('--muted-foreground', '0 0% 40%');
-      document.documentElement.style.setProperty('--accent', '0 0% 80%');
-      document.documentElement.style.setProperty('--accent-foreground', '0 0% 10%');
-      document.documentElement.style.setProperty('--border', '0 0% 90%');
-      document.documentElement.style.setProperty('--input', '0 0% 90%');
-      document.documentElement.style.setProperty('--ring', '0 0% 80%');
+      // document.documentElement.style.setProperty('--background', '0 0% 98%');
+      // document.documentElement.style.setProperty('--foreground', '0 0% 10%');
+      // document.documentElement.style.setProperty('--card', '0 0% 100%');
+      // document.documentElement.style.setProperty('--card-foreground', '0 0% 10%');
+      // document.documentElement.style.setProperty('--popover', '0 0% 100%');
+      // document.documentElement.style.setProperty('--popover-foreground', '0 0% 10%');
+      // document.documentElement.style.setProperty('--primary', '0 0% 0%');
+      // document.documentElement.style.setProperty('--primary-foreground', '0 0% 100%');
+      // document.documentElement.style.setProperty('--secondary', '0 0% 96%');
+      // document.documentElement.style.setProperty('--secondary-foreground', '0 0% 10%');
+      // document.documentElement.style.setProperty('--muted', '0 0% 90%');
+      // document.documentElement.style.setProperty('--muted-foreground', '0 0% 40%');
+      // document.documentElement.style.setProperty('--accent', '0 0% 80%');
+      // document.documentElement.style.setProperty('--accent-foreground', '0 0% 10%');
+      // document.documentElement.style.setProperty('--border', '0 0% 90%');
+      // document.documentElement.style.setProperty('--input', '0 0% 90%');
+      // document.documentElement.style.setProperty('--ring', '0 0% 80%');
     }
   };
 
