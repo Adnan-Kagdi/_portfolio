@@ -17,7 +17,7 @@ const ThemeToggle = () => {
         {isDarkTheme ? (
           <Sun size={18} className="transition-all duration-300" />
         ) : (
-          <Moon size={18} className="transition-all duration-300" />
+          <Moon size={18} className="" />
         )}
       </div>
     </button>

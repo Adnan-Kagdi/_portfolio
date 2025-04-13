@@ -135,7 +135,7 @@ const Hero = () => {
                   className={`group relative overflow-hidden px-8 py-6 rounded-xl transition-all duration-500 shadow-lg ${
                     isDarkTheme 
                       ? 'bg-gradient-to-r from-green-600 to-indigo-600 text-white hover:shadow-indigo-500/40' 
-                      : 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:shadow-indigo-400/30'
+                      : ''
                   }`}
                 >
                   <a className="relative z-10 flex items-center gap-2 font-medium transition-all duration-300 group-hover:tracking-wide" href="#projects">
@@ -162,7 +162,7 @@ const Hero = () => {
                   className={`group relative overflow-hidden px-8 py-6 rounded-xl border transition-all duration-300 shadow-lg ${
                     isDarkTheme 
                       ? 'border-white/20 text-white hover:border-white/40' 
-                      : 'border-black/20 text-black hover:border-black/40'
+                      : ''
                   }`}
                 >
                   <a className="relative z-10 flex items-center gap-2 font-medium transition-all duration-300 group-hover:tracking-wide" href="#contact">

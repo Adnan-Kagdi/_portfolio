@@ -106,11 +106,11 @@ const Navbar = () => {
             </a>
           ))}
           
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
         </nav>
 
         <div className="flex items-center gap-3 md:hidden">
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
           
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
