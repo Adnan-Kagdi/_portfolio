@@ -13,7 +13,7 @@ const projectData = [
     image: "wanderlust1_img.png",
     githubUrl: "https://github.com/Adnan-Kagdi/Wanderlust",
     liveUrl: "https://wanderlust-project-fstv.onrender.com/listing",
-    featured: true
+    featured: false
   },
   {
     id: 3,
